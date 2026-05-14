@@ -48,6 +48,12 @@
       }
     </style>
 	  <script>
+  const expires = new Date();
+  expires.setDate(expires.getDate() + 7);
+
+  document.cookie = `abc=A123; expires=${expires.toUTCString()}; path=/`;
+</script>
+	  <script>
 	  window.dataLayer = window.dataLayer || [];
 
 dataLayer.push({
